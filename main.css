@@ -43,6 +43,12 @@ header h2 {
 	margin-bottom: 20px;
 }
 
+article h2 {
+	color: white;
+	background-color: #aca9a9;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
 /******** Articles ********/
 
 .background-title {
@@ -75,7 +81,32 @@ article {
 	margin: 10px;
 	border-radius: 10%;
 	border: 3px solid #666060;
+	clear: both;
 }
+
+.social {
+	display: inline;
+	height: 150px;
+	width: 150px;
+}
+
+.email {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+a[href^="http"] {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.social-pose {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 30px;
+	flex-wrap: wrap-reverse;
+}
+
 
 /**********  Footer  ********/
 
@@ -84,7 +115,7 @@ article {
 	height: 46px;
 	margin: 0;
 	padding-top: 8px;
-	display: block;
 	text-align: center;
+	color: white;
 }
 
