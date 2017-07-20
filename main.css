@@ -5,7 +5,7 @@ body {
 /********** HEADER*********/
 
 .header {
-	background-color: pink;
+	background-color: #6b8989;
 	display: block;
 	height: 325px;
 	text-align: center;
@@ -111,7 +111,7 @@ a[href^="http"] {
 /**********  Footer  ********/
 
 .footer {
-	background-color: pink;
+	background-color: #6b8989;
 	height: 46px;
 	margin: 0;
 	padding-top: 8px;
