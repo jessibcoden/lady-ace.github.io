@@ -7,13 +7,8 @@ body {
 .header {
 	background-color: #6b8989;
 	display: block;
-	height: 325px;
+	height: 350px;
 	text-align: center;
-}
-nav a {
-	display: inline;
-	color: white;
-
 }
 
 .profilepic {
@@ -48,6 +43,32 @@ article h2 {
 	background-color: #aca9a9;
 	margin-top: 10px;
 	margin-bottom: 20px;
+}
+
+/***** Nav Bar *****/
+
+nav a {
+	display: inline;
+	color: white;
+	padding: 10px;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+.nav-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 30px;
+}
+
+nav a:hover {
+	background-color: white;
+	color: black;
+}
+
+.active {
+	font-size: 24px;	
 }
 /******** Articles ********/
 
