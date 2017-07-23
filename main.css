@@ -74,7 +74,7 @@ nav a:hover {
 
 .background-title {
 	height: 42.72px;
-	margin: 0;
+	margin-top: 30px;
 	padding-top: 19px;
 	text-align: center;
 	background-color: #aca9a9;
@@ -139,4 +139,42 @@ a[href^="http"] {
 	text-align: center;
 	color: white;
 }
+
+/********* BLOG ************/
+
+/***** Card Styling *****/
+
+ div .blog {
+	margin: 1%;
+	width: 400px;
+	border: 2px solid slategray;
+	border-radius: 10%;
+}
+
+.title {
+	text-align: center;
+}
+
+.title h4, h6 {
+	margin: 5px;
+}
+
+.content {
+	text-align: left;
+	border: none;
+}
+
+/***** Card Layout *****/
+
+#blog-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+
+
+
+
 
