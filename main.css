@@ -5,37 +5,29 @@ body {
 /********** HEADER*********/
 
 .header {
+	background-image: url("funny_lg.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity: .7;
 	background-color: #6b8989;
 	display: block;
 	height: 350px;
 	text-align: center;
 }
 
-.profilepic {
-	width: 150px;
-	height: 150px;
-	margin-top: 25px;
-	border-radius: 50%;
-	border: 3px solid white;
-	text-align: center;
-
-}
-
-header img:hover {
-	transform: scale(1.2) rotate(760deg);
-}
-
-
 .whoami {
-	font-size: bolder;
+	font-size: 4em;
+	font-weight: boler;
 	color: white;
 	margin-bottom: 10px;
+	z-index: 999;
 }
 
 header h2 {
 	color: white;
 	margin-top: 10px;
 	margin-bottom: 20px;
+	z-index: 999;
 }
 
 article h2 {
@@ -53,13 +45,15 @@ nav a {
 	padding: 10px;
 	font-size: 1em;
 	text-decoration: none;
+	z-index: 999;
 }
 
 .nav-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	margin: 30px;
+	padding: 20px;
+	padding-top: 10px;
 }
 
 nav a:hover {
@@ -172,6 +166,13 @@ a[href^="http"] {
 	justify-content: center;
 }
 
+/***** About Container *****/
+
+#about-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
 
 
