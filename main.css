@@ -163,8 +163,7 @@ a[href^="http"] {
 #blog-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	align-items: flex-start;
+	align-items: flex-center;
 }
 
 /***** About Container *****/
