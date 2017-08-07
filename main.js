@@ -1,12 +1,16 @@
 var allBlogs = [];
 
 var blog1 = {
-	title: "WTF",
+	title: "Hip, hip, Array!",
 	subTitle: "Week 3",
 	date: "July 30, 2017",
-	content: ["Chicken fingers… with spicy club sauce. It was the first taste of alcohol Buster had since he was nursing.I'm an ideas man, Michael. I think I proved that with 'Fuck Mountain.' I think that's one of Mom's little fibs, you know, like I'll sacrifice anything for my children.",
+	content: ["This was week 3 as a bootcamp student in the NSS “part-time” program. Weeks 1 & 2 focused on HTML and CSS and I found myself thinking I’ve got this. This isn’t so hard! Week 3 began javascript and … holy… this shit IS hard!",
 
-		" It's a jetpack, Michael. What could go wrong?Uncle Gob, was Aunt Lindsay ever pregnant? Yeah, sure, dozens of times. Each year, Oscar attempts the four hundred mile walk from Newport Beach to Berkeley, California. In the twelve years that he's attempted this, he's never made it farther than UC Irvine. If this were a Lifetime Moment of Truth movie, this would be our act break. But it wasn't."],
+		" We focused on objects, arrays, and for loops. From what I can gather OBJECTS are basically variables that can contain values (properties) and ARRAYS too are used to store multiple values in a single variable. It seems, at this point in my journey, that the main differentiator is that arrays are for numerically indexed data. Exactly when, why, and where to use which is a frustrating mystery at this point that has lead to obsessive pondering and stomach cramps.",
+
+		"FOR LOOPS hurt a little at first. It took a bit to envision it in practical application but the in class e-com exercise helped to unmuddy the waters; I’m beginnig to understand why we’d need to execute a block of code a number of times.",
+		
+		"After suffering a brain sprain I was able to restabelize and even pulled off a nested loop in the Boy Bands project. I’m absolutely loving this.. even the frustration is kinda fun!"],
 }
 
 var blog2 = {
