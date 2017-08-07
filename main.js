@@ -14,12 +14,19 @@ var blog1 = {
 }
 
 var blog2 = {
-	title: "Entry2",
+	title: "I’ll Never Eat Another Nugget",
 	subTitle: "Week 4",
 	date: "August 6, 2017",
-	content: ["Waiting for the Emmys. BTW did you know won 6 Emmys and was still canceled early by Fox? COME ON. When a man needs to prove to a woman that he's actually… When a man loves a woman… Taste the happy, Michael. Taste it. It tastes kind of like sad.", 
+	content: ["I started off the week feeling pretty great. Objects and arrays… easy. Loops… I got this! I’d even revisited what I’d covered on functions in the pre work and was all set and ready to dive in.", 
 
-		"You need to do more with Rita. Believe me, I'd like to. She keeps saying that God is going to show me a sign. The… something of my ways. Wisdom? No one's called him Baby Buster since high school. He's going to be all right. However, she mistook the drowsy eye alcohol warning for a winking eye alcohol suggestion."],
+		"To illustrate functions our instructor, Callan, subjected us to a horrendous cartoon video supposedly designed to teach math concepts to middle schoolers.  It started with adorably illustrated chickens lining up then entering a nugget factory conveyor belt style where they were then chopped up and packaged. ",
+
+		"It went on to process cows into packaged hamburger patties and fish into fish sticks. Okay, okay, make it stop! I get it! The factory is the function which was ran over and over to produce an outcome.",
+
+		"Instructor Zoe had a much less grotesque approach to introducing us to GitHub projects before assigning us a project building a temperature converter.",
+
+		"At this point I’ve learned a ton in a short period of time while working full time and managing a family. It’s getting harder and harder to shut off my brain at night and most days I’m doing good to call my children by the correct name, BUT I can write a hell of a function!"
+		],
 }
 
 var blog3 = {
