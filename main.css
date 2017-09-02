@@ -141,6 +141,8 @@ a[href^="http"] {
  div .blog {
 	margin: 1%;
 	width: 400px;
+	height: 200px;
+	overflow-y: hidden;
 	border: 2px solid slategray;
 	border-radius: 10%;
 }

@@ -59,13 +59,11 @@ allBlogs.push(blog5);
 
 let blogContainer = document.getElementById("blog-container");
 
+let domString = "";	
 for (let i = 0; i < allBlogs.length; i++){
-
 	const currentBlog = allBlogs[i];
-
-	const domString = "";
-	
-	domString += '<div class="blog">';
+	console.log("current blog", currentBlog);
+	domString += '<div class="blog col-md-3 col-md-offset-1">';
 	domString += 	'<header class="title">';
 	domString += 		'<h4>' + currentBlog.title +'</h4>';
 	domString += 		'<h5>' + currentBlog.subTitle +'</h5>';
@@ -83,13 +81,50 @@ for (let i = 0; i < allBlogs.length; i++){
 	domString +=	'</article>';
 	domString += '</div>';
 
-
-    blogContainer.innerHTML += domString;
+    blogContainer.innerHTML = domString;
 }
 
+let blog = document.getElementById("blog");
 
+document.addEventListener("click", (event) => {
+	if(event.target.parentNode.parentNode.classList.contains('blog')){
+		selectedBlog = event.target.parentNode.parentNode;
+	}
+	else if(event.target.parentNode.classList.contains('blog')){
+		selectedBlog = event.target.parentNode;
+	}
+	else if(event.target.classList.contains('blog')){
+		selectedBlog = event.target;
+	}
 
+	viewJumboBlog();
 
+});
+
+const viewJumboBlog = () => {
+	const title = selectedBlog.childNodes[0].childNodes[0].innerHTML;
+	const subTitle = selectedBlog.childNodes[0].childNodes[1].innerHTML;
+	const date = selectedBlog.childNodes[0].childNodes[2].innerHTML;
+
+	const content = selectedBlog.childNodes[1].childNodes;
+	console.log("content", content);
+
+	console.log("selected blog", selectedBlog);
+	let jumboDom = '';
+	jumboDom += `<div class="jumbotron container">`;
+  	jumboDom +=		`<h1>${title}</h1>`;
+  	jumboDom +=		`<h2>${subTitle}</h2>`;
+  	jumboDom +=		`<h4>${date}</h4>`;
+
+  	content.forEach((paragraph) => {	
+  		paragraph = paragraph.innerHTML;
+		jumboDom += 		`<p>${paragraph}</p>`;
+	})
+
+	jumboDom +=	`</div>`
+
+	document.getElementById("jumbo-div").innerHTML = jumboDom;
+}
 
 
 
