@@ -1,7 +1,7 @@
-const executeAfterBlogsFileLoads = () => {
-	console.log("this", this.responseText);
-	let data = JSON.parse(this.responseText);
-	domString(data.blogs);
+function executeAfterBlogsFileLoads(){
+	// console.log("this", this.responseText);
+	let data = JSON.parse(this.responseText).blogs;
+	printBlogArrayToDom(data);
 }
 
 const executeThisCodeIfFileErrors = () => {
@@ -14,38 +14,47 @@ myRequest.addEventListener("error", executeThisCodeIfFileErrors);
 myRequest.open("GET", "blogs.json");
 myRequest.send();
 
-allBlogs.push(blog1);
-allBlogs.push(blog2);
-allBlogs.push(blog3);
-allBlogs.push(blog4);
-allBlogs.push(blog5);
+// blogs.push(blog1);
+// blogs.push(blog2);
+// blogs.push(blog3);
+// blogs.push(blog4);
+// blogs.push(blog5);
 
-let blogContainer = document.getElementById("blog-container");
+const blogContainer = document.getElementById("blog-container");
 
-let domString = "";	
-for (let i = 0; i < allBlogs.length; i++){
-	const currentBlog = allBlogs[i];
-	console.log("current blog", currentBlog);
-	domString += '<div class="blog col-md-3 col-md-offset-1">';
-	domString += 	'<header class="title">';
-	domString += 		'<h4>' + currentBlog.title +'</h4>';
-	domString += 		'<h5>' + currentBlog.subTitle +'</h5>';
-	domString += 		'<h6>' + currentBlog.date + '</h6>';
-	domString +=	'</header>';
-	domString +=	'<article class="content">'
+const buildDomString = (blog) => {
+	let domString = "";
 
-	for (let j = 0; j < currentBlog.content.length; j++) {
+		domString += `<div class="blog col-md-3 col-md-offset-1">`;
+		domString += 	`<header class="title">`;
+		domString += 		`<h4>${blog.title}</h4>`;
+		domString += 		`<h5>${blog.subTitle}</h5>`;
+		domString += 		`<h6>${blog.date}</h6>`;
+		domString +=	`</header>`;
+		domString +=	`<article class="content">`;
 
-		const currentContent = currentBlog.content[j];
+		for (let j = 0; j < blog.content.length; j++) {
 
-		domString += 		'<p>' + currentContent + '</p>';
-	}
+			const currentContent = blog.content[j];
 
-	domString +=	'</article>';
-	domString += '</div>';
+			domString += 		`<p>${currentContent}</p>`;
+		}
 
-    blogContainer.innerHTML = domString;
+		domString +=	`</article>`;
+		domString += `</div>`;
+
+	    return(domString);
 }
+
+const printBlogArrayToDom = (blogArray) => {
+	for(let i = 0; i < blogArray.length; i++){
+
+		const currentBlog = blogArray[i];
+		const blogDomString = buildDomString(currentBlog);
+		blogContainer.innerHTML += blogDomString;
+	}
+}
+
 
 let blog = document.getElementById("blog");
 
