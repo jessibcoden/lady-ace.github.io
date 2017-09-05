@@ -2,7 +2,12 @@ function executeAfterBlogsFileLoads(){
 	// console.log("this", this.responseText);
 	let data = JSON.parse(this.responseText).blogs;
 	printBlogArrayToDom(data);
+	blogsData = data;
+
 }
+
+let blogsData = "";
+console.log(blogsData);
 
 const executeThisCodeIfFileErrors = () => {
 	console.log("Shit Broke");
@@ -98,8 +103,24 @@ const viewJumboBlog = () => {
 	document.getElementById("jumbo-div").innerHTML = jumboDom;
 }
 
+// ** Search Filter Feature **
 
+// let searchField = document.getElementById("search-field");
 
+// searchField.addEventListener('keypress', function(ev){
+// 	// console.log("event", ev.key);
+// 	if(ev.key == 'Enter'){
+// 		let txt = searchField.value;
+// 		//1. filter blogs array
+// 		let results = blogs.filter(function(thing){
+// 			console.log("filter blog", thing);
+// 			return thing.name.indexOf(txt)>-1;
+// 		})
+// 		//domString
+// 		domString(results);
+// 		console.log('yay', results);
+// 	}
+// })
 
 
 
