@@ -1,31 +1,18 @@
-function executeAfterBlogsFileLoads(){
-	// console.log("this", this.responseText);
-	let data = JSON.parse(this.responseText).blogs;
-	printBlogArrayToDom(data);
-	blogsData = data;
+// let blogsData = "";
 
-}
+$.ajax('blogs.json').done ((data) => {
+	// blogsData = data;
+	printBlogArrayToDom(data.blogs);
+}).fail((error) => {
+	console.log('error', error)
+});
 
-let blogsData = "";
-console.log(blogsData);
+// const blogContainer = document.getElementById("blog-container");
+// console.log("anything", blogContainer);
 
-const executeThisCodeIfFileErrors = () => {
-	console.log("Shit Broke");
-}
+// const blogContainer = $("#blog-container")[0];
+// console.log("jquery", blogContainer);
 
-let myRequest = new XMLHttpRequest();
-myRequest.addEventListener("load", executeAfterBlogsFileLoads);
-myRequest.addEventListener("error", executeThisCodeIfFileErrors);
-myRequest.open("GET", "blogs.json");
-myRequest.send();
-
-// blogs.push(blog1);
-// blogs.push(blog2);
-// blogs.push(blog3);
-// blogs.push(blog4);
-// blogs.push(blog5);
-
-const blogContainer = document.getElementById("blog-container");
 
 const buildDomString = (blog) => {
 	let domString = "";
@@ -56,51 +43,65 @@ const printBlogArrayToDom = (blogArray) => {
 
 		const currentBlog = blogArray[i];
 		const blogDomString = buildDomString(currentBlog);
-		blogContainer.innerHTML += blogDomString;
+		// blogContainer.innerHTML += blogDomString;
+		$("#blog-container").append(blogDomString);
 	}
 }
 
 
-let blog = document.getElementById("blog");
+// let blog = $('#blog');
 
-document.addEventListener("click", (event) => {
-	if(event.target.parentNode.parentNode.classList.contains('blog')){
-		selectedBlog = event.target.parentNode.parentNode;
+// document.addEventListener("click", (event) => {
+$('body').on('click', (event) => { 
+	if ($(event.target).closest('div').hasClass('blog')) {
+		selectedBlog = $(event.target).closest('div')[0];
 	}
-	else if(event.target.parentNode.classList.contains('blog')){
-		selectedBlog = event.target.parentNode;
-	}
-	else if(event.target.classList.contains('blog')){
-		selectedBlog = event.target;
-	}
+	// if(event.target.parentNode.parentNode.classList.contains('blog')){
+	// 	selectedBlog = event.target.parentNode.parentNode;
+		console.log(selectedBlog);
+	// }
+	// else if(event.target.parentNode.classList.contains('blog')){
+	// 	selectedBlog = event.target.parentNode;
+	// 	console.log(selectedBlog);
+
+	// }
+	// else if(event.target.classList.contains('blog')){
+	// 	selectedBlog = event.target;
+	// 	console.log(selectedBlog);
+
+	// }
 
 	viewJumboBlog();
 
 });
 
 const viewJumboBlog = () => {
-	const title = selectedBlog.childNodes[0].childNodes[0].innerHTML;
-	const subTitle = selectedBlog.childNodes[0].childNodes[1].innerHTML;
-	const date = selectedBlog.childNodes[0].childNodes[2].innerHTML;
+	// console.log("jumbo function", selectedBlog);
+	// const title = selectedBlog.childNodes[0].childNodes[0].innerHTML;
+	const title = $(selectedBlog).find('h4').html();
+	// const subTitle = selectedBlog.childNodes[0].childNodes[1].innerHTML;
+	const subTitle = $(selectedBlog).find('h5').html();
+	// const date = selectedBlog.childNodes[0].childNodes[2].innerHTML;
+	const date = $(selectedBlog).find('h6').html();
 
-	const content = selectedBlog.childNodes[1].childNodes;
+	// const content = selectedBlog.childNodes[1].childNodes;
+	const content = $(selectedBlog).find('.content')[0].childNodes;
 	console.log("content", content);
 
-	console.log("selected blog", selectedBlog);
+	// console.log("selected blog", selectedBlog);
 	let jumboDom = '';
 	jumboDom += `<div class="jumbotron container">`;
   	jumboDom +=		`<h1>${title}</h1>`;
   	jumboDom +=		`<h2>${subTitle}</h2>`;
   	jumboDom +=		`<h4>${date}</h4>`;
 
-  	content.forEach((paragraph) => {	
-  		paragraph = paragraph.innerHTML;
+  	$(content).each((paragraph) => {	
+  		paragraph = $(content[paragraph]).html();
 		jumboDom += 		`<p>${paragraph}</p>`;
 	})
 
 	jumboDom +=	`</div>`
-
-	document.getElementById("jumbo-div").innerHTML = jumboDom;
+	$("#jumbo-div").html(jumboDom);
 }
 
 // ** Search Filter Feature **
