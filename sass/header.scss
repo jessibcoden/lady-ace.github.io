@@ -1,0 +1,29 @@
+@import 'variables';
+
+.header {
+	background-image: url("/funny_lg.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity: .7;
+	background-color: #6b8989;
+	display: block;
+	height: 350px;
+	text-align: center;
+
+	h1 {
+		font-size: 4em;
+		font-weight: bolder;
+		color: white;
+		margin-bottom: 10px;
+		z-index: 999;
+	}
+
+	h2 {
+		color: $light-text-color;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		z-index: 999;
+	}
+}
+
+
