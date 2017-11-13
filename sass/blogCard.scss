@@ -1,0 +1,31 @@
+#blog-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-center;
+
+	 div .blog {
+		margin: 1%;
+		width: 400px;
+		height: 200px;
+		overflow-y: scroll;
+		border: 2px solid slategray;
+		border-radius: 10%;
+
+		.content {
+				text-align: left;
+				border: none;
+			}
+	
+		.title {
+			text-align: center;
+		
+
+			h4, h6 {
+				margin: 5px;
+			}			
+		}
+	}
+}
+
+
+

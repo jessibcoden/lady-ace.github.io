@@ -1,0 +1,107 @@
+#blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-center; }
+  #blog-container div .blog {
+    margin: 1%;
+    width: 400px;
+    height: 200px;
+    overflow-y: scroll;
+    border: 2px solid slategray;
+    border-radius: 10%; }
+    #blog-container div .blog .content {
+      text-align: left;
+      border: none; }
+    #blog-container div .blog .title {
+      text-align: center; }
+      #blog-container div .blog .title h4, #blog-container div .blog .title h6 {
+        margin: 5px; }
+
+.header {
+  background-image: url("/funny_lg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: .7;
+  background-color: #6b8989;
+  display: block;
+  height: 350px;
+  text-align: center; }
+  .header h1 {
+    font-size: 4em;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 10px;
+    z-index: 999; }
+  .header h2 {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    z-index: 999; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif; }
+
+article h2 {
+  color: white;
+  background-color: #aca9a9;
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+#about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.footer {
+  background-color: #6b8989;
+  height: 46px;
+  margin: 0;
+  padding-top: 8px;
+  text-align: center;
+  color: white; }
+
+/******** Articles ********/
+.background-title {
+  height: 42.72px;
+  margin-top: 30px;
+  padding-top: 19px;
+  text-align: center;
+  background-color: #aca9a9;
+  color: white; }
+
+h3 {
+  padding-left: 10px; }
+
+.job-title {
+  padding-top: 18.72px;
+  display: inline; }
+
+.emp-date {
+  list-style: none;
+  padding-left: 0;
+  display: inline; }
+
+article {
+  margin: 10px;
+  border-radius: 10%;
+  border: 3px solid #666060;
+  clear: both; }
+
+.social {
+  display: inline;
+  height: 150px;
+  width: 150px; }
+
+.email {
+  text-align: center;
+  font-size: 1.5em; }
+
+a[href^="http"] {
+  text-align: center;
+  font-size: 1.5em; }
+
+.social-pose {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+  flex-wrap: wrap-reverse; }

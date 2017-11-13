@@ -1,0 +1,89 @@
+@import 'blogCard';
+@import 'header';
+@import 'variables';
+
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+
+article h2 {
+	color: white;
+	background-color: #aca9a9;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#about-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.footer {
+	background-color: #6b8989;
+	height: 46px;
+	margin: 0;
+	padding-top: 8px;
+	text-align: center;
+	color: white;
+}
+
+/******** Articles ********/
+
+.background-title {
+	height: 42.72px;
+	margin-top: 30px;
+	padding-top: 19px;
+	text-align: center;
+	background-color: #aca9a9;
+	color: white;
+	
+}
+
+h3 {
+	padding-left: 10px;
+
+}
+
+.job-title {
+	padding-top: 18.72px;
+	display: inline;
+}
+
+.emp-date {
+	list-style: none;
+	padding-left: 0;
+	display: inline;
+}
+
+article {
+	margin: 10px;
+	border-radius: 10%;
+	border: 3px solid #666060;
+	clear: both;
+}
+
+.social {
+	display: inline;
+	height: 150px;
+	width: 150px;
+}
+
+.email {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+a[href^="http"] {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.social-pose {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 30px;
+	flex-wrap: wrap-reverse;
+}
